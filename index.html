@@ -76,7 +76,7 @@
                         your browser (client side).
                     </p>
                     <p>
-                        Download your encrypted string in a HTML page with a password prompt you can upload anywhere
+                        下载包含密码提示的加密字符串，该字符串将以 HTML 页面形式呈现，您可以将其上传到任何位置。
                         (see <a target="_blank" href="example/encrypted/example.html">example</a>).
                     </p>
                     <p>
@@ -97,14 +97,18 @@
                             sensitive banking data, you should probably use something else!
                         </p>
                         <p>
-                            StatiCrypt generates a static, password protected page that can be decrypted in-browser:
-                            just send or upload the generated page to a place serving static content (github pages, for
-                            example) and you're done: the javascript will prompt users for password, decrypt the page
-                            and load your HTML.
+                            StatiCrypt 生成一个静态的、受密码保护的页面，该页面可在浏览器中解密：
+
+只需将生成的页面发送或上传到提供静态内容的地方（例如 GitHub Pages），
+
+即可：JavaScript 将提示用户输入密码，解密页面，
+
+并加载您的 HTML。
                         </p>
                         <p>
-                            The page is encrypted with AES-256 in CBC mode (see why this mode is appropriate for
-                            StatiCrypt in
+                            该页面使用 AES-256 CBC 模式加密（了解为什么此模式适用于 StatiCrypt）。
+
+StatiCrypt
                             <a href="https://github.com/robinmoisson/staticrypt/issues/19">#19</a>). The password is
                             hashed with PBKDF2 (599k iterations with SHA-256, plus 1k with SHA-1 for legacy reasons (see
                             <a href="https://github.com/robinmoisson/staticrypt/issues/159">#159</a>), for the added
